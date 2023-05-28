@@ -3,7 +3,6 @@
   --black: #000000;
   --white: #ffffff;
   --green: #dcfa08;
-
 }
 
 body {
@@ -26,6 +25,10 @@ h2 {
   margin: 0;
   padding: 60px;
   font-size: 3.75rem;
+}
+
+p {
+  color: var(--white);
 }
 
 .invert {
@@ -59,6 +62,22 @@ h2 {
   margin-left: 80px;
   text-decoration: none;
   color: white;
+}
+
+.navigation-bar button {
+  margin-left: 80px;
+  border: none;
+  background-color: #dcfa08;
+  font-size: 18px;
+  font-weight: bold;
+  width: 80px;
+  height: 40px;
+  box-shadow: 0 0 40px 4px var(--green); /* Glowing shadow on hover */
+  transition: all 0.3s ease;
+}
+
+.navigation-bar button:hover {
+    transform: translateY(-5px);
 }
 
 .logo img {
@@ -133,6 +152,7 @@ h2 {
   position: absolute;
   bottom: 3rem;
   background-color: var(--black);
+  border: none;
   color: var(--white);
   font-size: 1.5rem;
   font-weight: 900;
@@ -247,20 +267,17 @@ h2 {
   text-align: center;
 }
 
-
 /* CONTACT SECTION */
 .contactSection {
-    background-image: url(../assets/images/backgrounds/03.png);
-    background-size: cover;
+  background-image: url(../assets/images/backgrounds/03.png);
+  background-size: cover;
 }
 
-
 .contactContent {
-position: relative;
+  position: relative;
   display: flex;
   align-items: flex-start;
 }
-
 
 .contactContent .textFields {
   display: flex;
@@ -278,6 +295,8 @@ position: relative;
   color: #333;
   font-size: 14px;
   font-family: Arial, sans-serif;
+  transition: all 0.3s ease;
+
 }
 
 .textFields input[type="text"]::placeholder {
@@ -286,9 +305,12 @@ position: relative;
 }
 
 .textFields input[type="text"]:focus {
+    outline: none;
   border-color: var(--green);
   background-color: #fff;
   color: #333;
+  transform: translateY(-5px);
+  box-shadow: 0 0 40px 12px var(--white);
 }
 
 .textFields button {
@@ -302,28 +324,91 @@ position: relative;
 }
 
 .textFields button:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 0 40px 12px var(--green);
-  }
+  transform: translateY(-5px);
+  box-shadow: 0 0 40px 12px var(--green);
+}
 
-  .contactInfo {
-    top: 0;
-    right: 120px;
-    position: absolute;
-    margin: 100px 0 auto 0;
-    background-color: #000000;
-    text-align: center;
-  }
+.contactInfo {
+  top: 0;
+  right: 120px;
+  position: absolute;
+  margin: 100px 0 auto 0;
+  background-color: #000000;
+  text-align: center;
+}
 
+/* FOOTER SECTION */
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 300px;
+  background-color: #000000;
+}
 
-  footer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 300px;
-    background-color: #000000;
-  }
+footer .newsLetter {
+  height: 100%;
+  margin-left: 200px;
+  justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+}
 
-  footer img {
-    height: 200px;
-  }
+footer .newsLetter img {
+  padding-top: 24px;
+  height: 180px;
+}
+
+footer .newsLetter form {
+  justify-content: space-between;
+  display: flex;
+  padding-bottom: 24px;
+  width: 100%;
+}
+
+footer .newsLetter form input {
+  padding: 4px 8px;
+  border: none;
+  outline: none;
+  height: 30px;
+  width: 50%;
+}
+
+footer .newsLetter form input:focus {
+  box-shadow: 0 0 40px 12px var(--green);
+}
+
+footer .newsLetter form button {
+  border: none;
+  color: var(--black);
+  background-color: var(--green);
+  width: 40%;
+}
+
+footer .newsLetter form button:hover {
+  box-shadow: 0 0 40px 12px var(--green);
+}
+
+footer .links {
+  flex-grow: 2;
+  display: flex;
+  justify-content: space-around;
+  align-items: end;
+  flex-direction: column;
+  margin: auto 130px auto auto;
+  height: 80%;
+}
+
+footer .links a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+footer .map {
+  margin-right: 200px;
+}
+
+footer .map p {
+  margin-bottom: 0;
+}

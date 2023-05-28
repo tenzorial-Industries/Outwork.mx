@@ -1,0 +1,329 @@
+/* SETUP */
+:root {
+  --black: #000000;
+  --white: #ffffff;
+  --green: #dcfa08;
+
+}
+
+body {
+  background-color: white;
+  margin: 0;
+  font-family: "Gothic A1", Helvetica, sans-serif;
+  font-weight: 800;
+}
+
+h1 {
+  color: var(--white);
+  font-size: 8rem;
+  text-align: center;
+  margin: 2rem;
+}
+
+h2 {
+  color: var(--white);
+  text-align: center;
+  margin: 0;
+  padding: 60px;
+  font-size: 3.75rem;
+}
+
+.invert {
+  color: var(--black);
+}
+
+/* FONTS */
+@font-face {
+  font-family: "bold";
+  src: url("../assets/fonts/AkzidenzGrotesk-BoldExtended.otf")
+    format("truetype");
+}
+
+@font-face {
+  font-family: "normal";
+  src: url("../assets/fonts/AkzidenzGrotesk-Extended.otf") format("truetype");
+}
+
+/* NAVIGATION BAR */
+.navigation-bar {
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 240px;
+  background-color: black;
+}
+
+.navigation-bar a {
+  font-size: 1rem;
+  margin-left: 80px;
+  text-decoration: none;
+  color: white;
+}
+
+.logo img {
+  height: 80px;
+}
+
+/* LANDING SECTION */
+.landingSection {
+  background-image: url("../assets/images/facilities/01.png");
+  background-size: cover;
+  background-position: center;
+  height: calc(100vh - 120px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.landingWdgtContainer {
+  text-align: center;
+  padding: 20px;
+}
+
+.landingWdgtContainer .book-now {
+  background-color: transparent;
+  border: 6px solid var(--green);
+  color: var(--white);
+  padding: 18px 32px;
+  font-size: 18px;
+  transition: all 0.3s ease;
+  box-shadow: none;
+}
+
+.landingWdgtContainer .book-now:hover {
+  color: white;
+  box-shadow: 0 0 100px 12px var(--green); /* Glowing shadow on hover */
+  transform: translateY(-5px);
+}
+
+/* PLANS SECTION */
+.choosePlanSection {
+  background-color: var(--black);
+}
+
+.choosePlanSection .plansContainer {
+  display: flex;
+  justify-content: space-around;
+  padding: 0 120px 60px 120px;
+}
+
+.plansContainer container {
+  display: flex;
+  flex-direction: column;
+  height: 500px;
+  background-color: var(--white);
+  width: 375px;
+  align-items: center;
+  position: relative;
+}
+
+.plansContainer container h3 {
+  font-size: 8rem;
+  margin: 38px auto 60px auto;
+}
+
+.plansContainer container p {
+  margin: 0 auto 80px auto;
+  text-align: center;
+  font-size: 2.5rem;
+}
+
+.plansContainer container button {
+  position: absolute;
+  bottom: 3rem;
+  background-color: var(--black);
+  color: var(--white);
+  font-size: 1.5rem;
+  font-weight: 900;
+  padding: 12px 60px;
+  transition: transform 0.6s ease;
+}
+
+.plansContainer container button:hover {
+  transform: translateY(-10px);
+}
+
+.plansContainer container .greenButton {
+  color: var(--black);
+  background-color: var(--green);
+}
+
+.plansContainer .unlimitedPlan {
+  background-image: url("../assets/images/backgrounds/01.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: var(--white);
+}
+
+.plansContainer .powerPlan {
+  background-color: var(--green);
+}
+
+/* FACILITIES SECTION */
+.facilitiesSection {
+  color: var(--black);
+  background-color: #dcfa08;
+}
+
+.facilitiesSection > h2 {
+  padding: 60px auto 10px auto;
+}
+
+.image-grid {
+  --gap: 24px;
+  --num-cols: 5;
+  --row-height: 300px;
+
+  box-sizing: border-box;
+  padding: var(--gap);
+
+  display: grid;
+  grid-template-columns: repeat(var(--num-cols), 1fr);
+  grid-auto-rows: var(--row-height);
+  gap: var(--gap);
+}
+
+.image-grid img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.image-grid-col-2 {
+  grid-column: span 2;
+}
+
+.image-row-col-2 {
+  grid-row: span 2;
+}
+
+@media screen and (max-width: 767px) {
+  .image-grid {
+    --num-cols: 2;
+    --row-height: 200px;
+  }
+}
+
+/* INSTAGRAM SECTION */
+.instagramSection {
+  background-image: url("../assets/images/backgrounds/02.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.instagramSection > .postsContainer {
+  display: flex;
+  justify-content: space-around;
+  padding: 0 120px 60px 120px;
+}
+
+.postsContainer > container {
+  cursor: pointer;
+  height: 34.375rem;
+  width: 31.25rem;
+  background-color: #ffffff;
+  box-shadow: 0 0 110px 12px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.postsContainer > container > img {
+  padding: 36px;
+}
+
+/* LOCATION SECTION */
+.locationSection {
+  background-color: #000000;
+}
+
+.locationSection p {
+  color: var(--white);
+  padding: 22px;
+  margin: 0;
+  font-size: 42px;
+  text-align: center;
+}
+
+
+/* CONTACT SECTION */
+.contactSection {
+    background-image: url(../assets/images/backgrounds/03.png);
+    background-size: cover;
+}
+
+
+.contactContent {
+position: relative;
+  display: flex;
+  align-items: flex-start;
+}
+
+
+.contactContent .textFields {
+  display: flex;
+  flex-direction: column;
+  padding: 0 0 60px 120px;
+}
+
+.textFields input[type="text"] {
+  width: 600px;
+  height: 30px;
+  margin: 24px 0 0 0;
+  border: 1px solid #ccc;
+  background-color: #f2f2f2;
+  padding: 20px;
+  color: #333;
+  font-size: 14px;
+  font-family: Arial, sans-serif;
+}
+
+.textFields input[type="text"]::placeholder {
+  color: #999;
+  font-style: italic;
+}
+
+.textFields input[type="text"]:focus {
+  border-color: var(--green);
+  background-color: #fff;
+  color: #333;
+}
+
+.textFields button {
+  height: 60px;
+  width: 642px;
+  margin: 24px 0 0 0;
+  font-size: 24px;
+  background-color: var(--green);
+  border: none;
+  transition: box-shadow 0.2s ease;
+}
+
+.textFields button:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 40px 12px var(--green);
+  }
+
+  .contactInfo {
+    top: 0;
+    right: 120px;
+    position: absolute;
+    margin: 100px 0 auto 0;
+    background-color: #000000;
+    text-align: center;
+  }
+
+
+  footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    background-color: #000000;
+  }
+
+  footer img {
+    height: 200px;
+  }

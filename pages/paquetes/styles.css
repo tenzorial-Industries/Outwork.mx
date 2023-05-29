@@ -1,0 +1,104 @@
+/* LANDING SECTION */
+.landingSection {
+  height: auto;
+  background-image: url(../../assets/images/backgrounds/01.png);
+}
+
+.landingSection h1 {
+  margin: 75px 40px;
+}
+
+/* CLASSES SECTION */
+.typesOfClassesSection {
+  background-color: blueviolet;
+}
+
+.typesOfClassesSection .image-grid {
+  --gap: 0px;
+  --num-cols: 2;
+  --row-height: 700px;
+}
+
+.typesOfClassesSection .image-grid div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.typesOfClassesSection .image-grid div p {
+  margin: 0 80px;
+  font-size: 36px;
+}
+
+.HIIT {
+  background-image: url(../../assets/images/classes/HIIT.png);
+  background-size: cover;
+}
+
+.HIIT h2 {
+  transition: all 0.3s ease;
+  transform: translateY(60px);
+}
+
+.HIIT p {
+  opacity: 0;
+  transition: all 0.1s ease;
+}
+
+.HIIT:hover h2 {
+  transform: translateY(0px);
+  opacity: 1;
+}
+
+.HIIT:hover p {
+  opacity: 1;
+}
+
+.CALISTENIA {
+  background-image: url(../../assets/images/classes/Calistenia.png);
+  background-size: cover;
+}
+
+.CALISTENIA h2 {
+  transition: all 0.3s ease;
+  transform: translateY(60px);
+}
+
+.CALISTENIA p {
+  opacity: 0;
+  transition: all 0.1s ease;
+}
+
+.CALISTENIA:hover h2 {
+  transform: translateY(0px);
+  opacity: 1;
+}
+
+.CALISTENIA:hover p {
+  opacity: 1;
+}
+
+.YOGA {
+  background-image: url(../../assets/images/classes/Yoga.png);
+  background-size: cover;
+}
+
+.YOGA h2 {
+  transition: all 0.3s ease;
+  transform: translateY(60px);
+}
+
+.YOGA p {
+  opacity: 0;
+  transition: all 0.1s ease;
+}
+
+.YOGA:hover h2 {
+  transform: translateY(0px);
+  opacity: 1;
+}
+
+.YOGA:hover p {
+  opacity: 1;
+}

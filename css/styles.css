@@ -5,6 +5,14 @@
   --green: #dcfa08;
 }
 
+
+
+
+
+
+
+
+
 body {
   background-color: white;
   margin: 0;
@@ -61,7 +69,7 @@ p {
   background-color: black;
 }
 
-.navigation-bar a {
+.navigation-bar .menu a {
   font-size: 1rem;
   margin-left: 80px;
   text-decoration: none;
@@ -84,8 +92,12 @@ p {
     transform: translateY(-5px);
 }
 
-.logo img {
+#desktopLogo {
   height: 80px;
+}
+
+#mobileLogo {
+  display: none;
 }
 
 /* LANDING SECTION */
@@ -415,4 +427,21 @@ footer .map {
 
 footer .map p {
   margin-bottom: 0;
+}
+
+
+/* MOBILE SCREEN */
+@media (max-width: 500px) {
+  .navigation-bar {
+    padding: 0 40px;
+  }
+
+  #desktopLogo {
+    display: none;
+  }
+
+  #mobileLogo {
+    display: block;
+    height: 50px;
+  }
 }
